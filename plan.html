@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="paper plan-paper">
+      <a class="back-link" href="index.html">Back to bucket list</a>
+
+      <header class="plan-header">
+        <p>Planning page</p>
+        <h1 id="planTitle">Bucket List</h1>
+      </header>
+
+      <form id="planForm" class="plan-form">
+        <label class="wide-field">
+          Title
+          <input id="titleInput" name="title" type="text" required />
+        </label>
+
+        <label>
+          Date or season
+          <input id="dateInput" name="date" type="text" placeholder="Optional for now" />
+        </label>
+
+        <label>
+          Budget
+          <input id="budgetInput" name="budget" type="text" placeholder="Optional for now" />
+        </label>
+
+        <label>
+          Location
+          <input id="locationInput" name="location" type="text" placeholder="Where are we going?" />
+        </label>
+
+        <label>
+          Priority
+          <select id="priorityInput" name="priority">
+            <option value="Soon">Soon</option>
+            <option value="Someday">Someday</option>
+            <option value="Special">Special</option>
+          </select>
+        </label>
+
+        <label class="wide-field">
+          Plan notes
+          <textarea id="notesInput" name="notes" rows="5" placeholder="Tickets, opening hours, links, outfits, photo ideas..."></textarea>
+        </label>
+
+        <label class="wide-field">
+          Things to bring
+          <textarea id="packingInput" name="packing" rows="4" placeholder="Camera, portable charger, snacks..."></textarea>
+        </label>
+
+        <label class="wide-field">
+          Food or places nearby
+          <textarea id="placesInput" name="places" rows="4" placeholder="Restaurants, cafes, activities nearby..."></textarea>
+        </label>
+
+        <button type="submit">Save plan</button>
+      </form>
+    </main>
+
+    <script src="plan.js"></script>
+  </body>
+</html>

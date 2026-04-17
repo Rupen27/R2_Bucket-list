@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rathika & Rupen Bucket List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="paper">
+      <header class="page-header">
+        <div class="travellers" aria-hidden="true">
+          <div class="person person-one"><span class="head"></span><span class="hair"></span><span class="coat"></span><span class="leg left-leg"></span><span class="leg right-leg"></span></div>
+          <div class="suitcase suitcase-one"></div>
+          <div class="person person-two"><span class="head"></span><span class="hair"></span><span class="coat"></span><span class="leg left-leg"></span><span class="leg right-leg"></span></div>
+          <div class="suitcase suitcase-two"></div>
+        </div>
+
+        <div class="title-block">
+          <p>Rathika & Rupen</p>
+          <h1>Bucket List</h1>
+        </div>
+
+        <div class="right-doodles" aria-hidden="true">
+          <div class="todo-sticker"><span>to do</span></div>
+          <div class="bucket-art"><span class="bucket-rim"></span><span class="bucket-body"></span><span class="bucket-handle"></span></div>
+        </div>
+      </header>
+
+      <section class="add-strip" aria-label="Add a bucket list item">
+        <form id="bucketForm">
+          <label>
+            What we want to do
+            <input id="titleInput" name="title" type="text" placeholder="Camping trip to Pulau Ubin" required />
+          </label>
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="toolbar" aria-label="Bucket list controls">
+        <div class="stats">
+          <span><strong id="totalCount">0</strong> plans</span>
+          <span><strong id="doneCount">0</strong> done</span>
+          <span><strong id="nextCount">0</strong> left</span>
+        </div>
+        <div class="filters" aria-label="Filter bucket list">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="open">Open</button>
+          <button class="filter-button" type="button" data-filter="done">Done</button>
+        </div>
+      </section>
+
+      <section id="bucketList" class="bucket-list" aria-live="polite"></section>
+    </main>
+
+    <template id="itemTemplate">
+      <article class="bucket-item">
+        <label class="check-wrap">
+          <input class="item-check" type="checkbox" />
+          <span></span>
+        </label>
+        <a class="item-link" href="#"></a>
+        <button class="delete-button" type="button" aria-label="Delete item">x</button>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
